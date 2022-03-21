@@ -1,0 +1,47 @@
+.landinglogin{
+  position: absolute;
+  left: 49.7%;
+  top: 63.5%;
+  transform: translate(-50%, -50%);
+}
+.landingloginborder{
+  position: absolute;
+  width: 35%;
+  height: 12%;
+  left: 49.7%;
+  top: 63%;
+  transform: translate(-50%, -50%);
+
+  background: #632AAC;
+  border: 1px solid #632AAC;
+  box-sizing: border-box;
+}
+.landingsignup{
+  position: absolute;
+  left: 49.7%;
+  top: 78%;
+  transform: translate(-50%, -50%);
+}
+.landingsignupborder{
+  position: absolute;
+  width: 35%;
+  height: 12%;
+  left: 49.7%;
+  top: 78%;
+  transform: translate(-50%, -50%);
+  background: #632AAC;
+  border: 1px solid #632AAC;
+  box-sizing: border-box;
+}
+.landingnomo{
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+}
+.landingquote{
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}

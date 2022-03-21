@@ -1,0 +1,50 @@
+.NOMO{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-170%, 10%);
+  }
+.Quote{
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    transform: translate(-117%, 10%);
+}
+input[type=usernametext] {
+    font-size:25px;
+    width: 25%;
+    padding: 23px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 27%;
+    transform: translate(17%, 10%);
+}
+input[type=passwordtext] {
+    font-size:25px;
+    width: 25%;
+    padding: 23px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 41%;
+    transform: translate(17%, 10%);
+}
+.loginborder{
+    position: absolute;
+    width: 25%;
+    height: 11%;
+    left: 56.5%;
+    top: 57%;
+
+    background: #632AAC;
+    border: 1px solid #632AAC;
+    box-sizing: border-box;
+}
+.loginclass{
+    position: absolute;
+    width: 25%;
+    height: 11%;
+    left: 65.6%;
+    top: 61%;
+}

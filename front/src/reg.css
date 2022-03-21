@@ -1,0 +1,62 @@
+.NOMO{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-170%, 10%);
+  }
+  .Quote{
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    transform: translate(-117%, 10%);
+  }
+  
+  input[type=usernametext] {
+    font-size:25px;
+    width: 25%;
+    padding: 23px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 27%;
+    transform: translate(17%, 10%);
+  }
+  input[type=passwordtext] {
+    font-size:25px;
+    width: 25%;
+    padding: 23px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 41%;
+    transform: translate(17%, 10%);
+  }
+  input[type=retypepasswordtext] {
+    font-size:25px;
+    width: 25%;
+    padding: 23px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(17%, 10%);
+  }
+  .reg{
+    position: absolute;
+    left: 59.1%;
+    top: 74%;
+    transform: translate(17%, 10%);
+  
+  }
+  .regborder{
+    position: absolute;
+    width: 28.3%;
+    height: 10%;
+    left: 50%;
+    top: 69%;
+    transform: translate(17%, 10%);
+  
+    background: #632AAC;
+    border: 1px solid #632AAC;
+    box-sizing: border-box;
+  }
