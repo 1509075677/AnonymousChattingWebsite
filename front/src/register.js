@@ -9,7 +9,7 @@ function Register() {
     
     const register =() =>{
         navigate("/")
-        Axios.post('http://localhost:3306/register',{
+        Axios.post('http://localhost:3302/register',{
         username : usernameR,
         password : passwordR,
         }).then(()=>{

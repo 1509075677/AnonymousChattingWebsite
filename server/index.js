@@ -45,6 +45,6 @@ app.post('/login',(req,res)=>{
     })
 });
 
-app.listen(3306, ()=>{
-    console.log("runnning on port 3306");
+app.listen(3302, ()=>{
+    console.log("runnning on port 3302");
 });
