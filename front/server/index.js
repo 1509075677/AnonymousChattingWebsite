@@ -3,6 +3,7 @@ const bodyParser =require('body-parser');
 const app = express();
 const mysql = require('mysql');
 const cors = require('cors');
+const PORT = 3302;
 
 app.use(express.json());
 app.use(cors());
@@ -45,6 +46,6 @@ app.post('/login',(req,res)=>{
     })
 });
 
-app.listen(3302, ()=>{
-    console.log("runnning on port 3302");
+app.listen(process.env.PORT || PORT, ()=>{
+    console.log("runnning on port");
 });

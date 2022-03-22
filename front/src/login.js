@@ -11,7 +11,6 @@ function Login() {
   const login =() =>{
     navigate("/")
     Axios.post('http://localhost:3302/login',{
-      
       username : usernameR,
       password : passwordR,
     }).then(()=>{
