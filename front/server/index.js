@@ -18,32 +18,26 @@ const db= mysql.createConnection({
 app.post('/register',(req,res)=>{
     const username = req.body.username;
     const password = req.body.password;
-    const sql ="INSERT INTO account (username, password) VALUES ?"
-    var insert=[[username,password]]
-    db.query(sql, [insert],(err,result)=>{
-        if (err) throw err;
-        alert("success");
-    })
+    const sql ="INSERT INTO account (username, password) VALUES (?,?)"
+    db.query(sql, [username,password]);
 });
 
 app.post('/login',(req,res)=>{
     const username = req.body.username;
     const password = req.body.password;
-    const sql ="SELECT * users WHERE username = ? AND password = ?"
-    var insert=[[username,password]]
-    db.query(sql, [insert],(err,result)=>{
+    const sql ="SELECT * FROM account WHERE username = ? AND password = ?"
+    db.query(sql, [username,password],(err,result)=>{
         if (err) {
-            res.send({err:err})
-            
+            res.send({err:err});
         }
-        if(result){
+        if(result.length > 0){
             res.send(result);
         }
         else{
-            res.send({message:"Wrong username/password combination!"});
+            res.send({message:"WRONG PW/USER"});
         }
         
-    })
+    });
 });
 
 app.listen(process.env.PORT || PORT, ()=>{
