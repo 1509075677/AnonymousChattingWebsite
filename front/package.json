@@ -16,7 +16,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT=3301 && react-scripts start",
+    "start": "set PORT=3302 && react-scripts start",
     "dev": "concurrently \"npm start\" \"cd server && nodemon index.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",

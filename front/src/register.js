@@ -8,12 +8,12 @@ function Register() {
     let navigate = useNavigate();
     
     const register =() =>{
-        Axios.post('http://localhost:3302/login',{
+        Axios.post('http://localhost:3301/login',{
         username : usernameR,
         password : passwordR,
         }).then((response)=>{
         if(response.data.message){
-            Axios.post('http://localhost:3302/register',{
+            Axios.post('http://localhost:3301/register',{
             username : usernameR,
             password : passwordR,
             });
