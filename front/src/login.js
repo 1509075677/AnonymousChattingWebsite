@@ -9,7 +9,7 @@ function Login() {
   let navigate = useNavigate();
 
   const login =() =>{
-    Axios.post('http://cheshire.cse.buffalo.edu:3302/login',{
+    Axios.post('http://localhost:3302/login',{
       username : usernameR,
       password : passwordR,
     }).then((response)=>{
