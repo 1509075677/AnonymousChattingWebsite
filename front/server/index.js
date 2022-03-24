@@ -22,6 +22,43 @@ app.post('/register',(req,res)=>{
     db.query(sql, [username,password]);
 });
 
+app.post('/profile',(req,res)=>{
+    const username = req.body.username;
+    const birthday = null;
+    const email = null;
+    const sql ="INSERT INTO profile (username, birthday, email) VALUES (?,?,?)"
+    db.query(sql, [username,birthday,email]);
+});
+
+app.post('/showdata',(req,res)=>{
+    const username = req.body.username;
+    const sql ="SELECT * FROM profile WHERE username = ?"
+    db.query(sql, [username],(err,result)=>{
+        if (err) {
+            res.send({err:err});
+        }
+        else{
+            res.send(result);
+        }
+    });
+});
+
+app.post('/pfmodify',(req,res)=>{
+    const username = req.body.username;
+    const birthday = req.body.birthday;
+    const email = req.body.email;
+    const sql="UPDATE profile SET username=?, birthday=?, email=? WHERE username = ?"
+    db.query(sql, [username,birthday,email,username],(err,result)=>{
+        if (err) {
+            res.send({err:err});
+        }
+        else{
+            res.send([birthday,email]);
+        }
+    });
+});
+
+
 app.post('/login',(req,res)=>{
     const username = req.body.username;
     const password = req.body.password;
