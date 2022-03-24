@@ -40,6 +40,6 @@ app.post('/login',(req,res)=>{
     });
 });
 
-app.listen(process.env.PORT || PORT, ()=>{
+app.listen(PORT, ()=>{
     console.log("runnning on port 3302");
 });
