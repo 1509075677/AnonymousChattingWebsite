@@ -17,10 +17,10 @@ function Mainpage() {
             navigate("/");}}>Search
             </button>
             <button class="identifiedbutton"onClick={()=>{
-            navigate("/");}}>Identified
+            navigate("/chati");}}>Identified
             </button>
             <button class="anonymousbutton"onClick={()=>{
-            navigate("/");}}>Anonymous
+            navigate("/chata");}}>Anonymous
             </button>
             <button class="designerbutton"onClick={()=>{
             navigate("/");}}>Designer
