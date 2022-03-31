@@ -8,11 +8,15 @@ import Chati from './chati';
 import Chata from './chata';
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Mainpage from './mainpage';
+import Profilemodify from './profilemodify';
+import Profile from './profile';
 
 function App() {
   return(
     <Router>
       <Routes>
+      <Route path="/profile" element={<Profile />}/>
+        <Route path="/profilemodify" element={<Profilemodify />}/>
         <Route path="/" element={<Landing />}/>
         <Route path="/main" element={<Mainpage/>}/>
         <Route path="/login" element={<Login />}/>
@@ -24,5 +28,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;

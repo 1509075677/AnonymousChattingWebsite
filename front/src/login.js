@@ -19,6 +19,7 @@ function Login() {
         alert("WRONG PASSWORD OR USERNAME");
       }
       else{
+        localStorage.setItem("name",response.data[0].username)
         alert("WELCOME "+ response.data[0].username);
         navigate("/main")
       }

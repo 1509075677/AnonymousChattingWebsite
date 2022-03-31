@@ -17,6 +17,9 @@ function Register() {
             username : usernameR,
             password : passwordR,
             });
+            Axios.post('http://cheshire.cse.buffalo.edu:3301/profile',{
+            username : usernameR,
+            });
             alert("REGISTRATION SUCCESSFUL");
             navigate("/login");
         }
