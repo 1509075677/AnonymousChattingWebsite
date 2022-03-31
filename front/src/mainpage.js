@@ -20,19 +20,19 @@ function Mainpage() {
             <button class="backbutton"onClick={()=>{
             navigate("/");}}>BACK
             </button>
-            <button class="profilebutton"onClick={showdata1}>Profile
+            <button class="profilebutton"onClick={showdata1}>PROFILE
             </button>
             <button class="searchbutton"onClick={()=>{
-            navigate("/");}}>Search
+            navigate("/");}}>SEARCH
             </button>
             <button class="identifiedbutton"onClick={()=>{
-            navigate("/chati");}}>Identified
+            navigate("/chati");}}>IDENTIFIED
             </button>
             <button class="anonymousbutton"onClick={()=>{
-            navigate("/chata");}}>Anonymous
+            navigate("/chata");}}>ANONYMOUS
             </button>
             <button class="designerbutton"onClick={()=>{
-            navigate("/");}}>Designer
+            navigate("/infoPage");}}>DESIGNER
             </button>
         </div>
     );

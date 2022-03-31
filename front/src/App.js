@@ -10,12 +10,14 @@ import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Mainpage from './mainpage';
 import Profilemodify from './profilemodify';
 import Profile from './profile';
+import InfoPage from './infoPage'
 
 function App() {
   return(
     <Router>
       <Routes>
-      <Route path="/profile" element={<Profile />}/>
+        <Route path="/profile" element={<Profile />}/>
+        <Route path="/infoPage" element={<InfoPage />}/>
         <Route path="/profilemodify" element={<Profilemodify />}/>
         <Route path="/" element={<Landing />}/>
         <Route path="/main" element={<Mainpage/>}/>
