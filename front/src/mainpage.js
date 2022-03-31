@@ -32,7 +32,7 @@ function Mainpage() {
             navigate("/");}}>Anonymous
             </button>
             <button class="designerbutton"onClick={()=>{
-            navigate("/");}}>Designer
+            navigate("/infoPage");}}>Designer
             </button>
         </div>
     );
