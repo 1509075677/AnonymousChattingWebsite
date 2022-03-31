@@ -6,6 +6,7 @@ import Landing from './landing';
 import Error from './Error';
 import Profile from './profile';
 import Profilemodify from './profilemodify';
+import InfoPage from './infoPage';
 import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom';
 import {useNavigate} from "react-router-dom";
 import Mainpage from './mainpage';
@@ -14,6 +15,7 @@ function App() {
   return(
     <Router>
       <Routes>
+        <Route path="/infoPage" element={<InfoPage />}/>
         <Route path="/" element={<Landing />}/>
         <Route path="/mainpage" element={<Mainpage/>}/>
         <Route path="/profile" element={<Profile />}/>
