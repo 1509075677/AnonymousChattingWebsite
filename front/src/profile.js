@@ -21,7 +21,7 @@ function Profile() {
             <p class="mybirthday">MY BIRTHDAY:</p> 
             <p class="myemail">MY EMAIL:</p>
             <button class="back1button"onClick={()=>{
-             navigate("/mainpage");}}>Back
+             navigate("/main");}}>Back
             </button> 
             <button class="modifybutton"onClick={()=>{
              navigate("/profilemodify");}}>Modify
