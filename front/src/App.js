@@ -9,7 +9,7 @@ import Profilemodify from './profilemodify';
 import InfoPage from './infoPage';
 import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom';
 import {useNavigate} from "react-router-dom";
-import Mainpage from './mainpage';
+import Mainpage from './main';
 
 function App() {
   return(
@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/infoPage" element={<InfoPage />}/>
         <Route path="/" element={<Landing />}/>
-        <Route path="/mainpage" element={<Mainpage/>}/>
+        <Route path="/main" element={<Mainpage/>}/>
         <Route path="/profile" element={<Profile />}/>
         <Route path="/profilemodify" element={<Profilemodify />}/>
         <Route path="/login" element={<Login />}/>
