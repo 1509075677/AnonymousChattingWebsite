@@ -19,7 +19,7 @@ function Login() {
       else{
         localStorage.setItem("name",response.data[0].username)
         alert("WELCOME "+ response.data[0].username);
-        navigate("/mainpage")
+        navigate("/main")
       }
     });
   };
