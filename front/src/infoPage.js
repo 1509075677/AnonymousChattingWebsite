@@ -7,7 +7,7 @@ function InfoPage() {
     let navigate = useNavigate();
     return(
     <div>
-        <p class="designertitle">Designer</p>
+        <p class="designertitle">DESIGNER</p>
         <div>
             <div class="PicBoxJason">
                 <img class="Pic" src="./images/profilephoto.svg" alt="Jason"/>
@@ -21,21 +21,18 @@ function InfoPage() {
         </div>
             <p class="JasonInfo">
                 <b>Name:</b> Jason Chen<br></br>
-                <b>Contant Email:</b> ?@buffalo.edu<br></br>
-                <b>Education:</b> University at Buffalo, computer science BS, Junior<br></br>
-                <b>Develop:</b> Profile, Register Pager<br></br>
+                <b>Education:</b> University at Buffalo, Computer Science BS, Junior<br></br>
+                <b>Developed:</b> Login,Register<br></br>
             </p>
             <p class="ZhaoweiInfo">
                 <b>Name:</b> Zhaowei Zhao<br></br>
-                <b>Contant Email:</b> ?@buffalo.edu<br></br>
-                <b>Education: University</b> at Buffalo, computer science BS, Junior<br></br>
-                <b>Develop:</b> Login System, Login Page<br></br>
+                <b>Education: University</b> at Buffalo, Computer Science BS, Junior<br></br>
+                <b>Developed:</b> Profile <br></br>
             </p>
             <p class="WeichengInfo">
                 <b>Name:</b> Weicheng Zhou<br></br>
-                <b>Contant Email:</b> wzhou29@buffalo.edu<br></br>
-                <b>Education:</b> University at Buffalo, computer science BS, Junior<br></br>
-                <b>Develop:</b> Information Page<br></br>
+                <b>Education:</b> University at Buffalo, Computer Science BS, Junior<br></br>
+                <b>Developed:</b> Designer Page<br></br>
             </p>
             <button class="Back"onClick={()=>{
             navigate("/main");}}>Back

@@ -1,0 +1,32 @@
+.home{
+    position: absolute;
+    transform: translate(1030%, 50%);
+}
+.out{
+    position: absolute;
+    transform: translate(70%, 10%);
+}
+.in{
+    position: absolute;
+    transform: translate(70%, 27%);
+}
+.send{
+    position: absolute;
+    transform: translate(2112%, 3488%);
+}
+.sendbox{
+    position: absolute;
+    transform: translate(919%, 1580%);
+}
+.iden{
+    position: absolute;
+    transform: translate(371%, 360%);
+}
+.ano{
+    position: absolute;
+    transform: translate(300%, 360%);
+}
+.chatbox{
+    position: absolute;
+    transform: translate(70%, 1580%);
+}

@@ -2,7 +2,6 @@ import React from 'react';
 import {useNavigate} from "react-router-dom";
 import './profile.css'
 
-
 function Profile() {
     let navigate = useNavigate();
     let showname = localStorage.getItem("name");
@@ -31,3 +30,4 @@ function Profile() {
     );
 }
 export default Profile;
+

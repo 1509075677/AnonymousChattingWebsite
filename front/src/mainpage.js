@@ -6,7 +6,7 @@ import Axios from 'axios'
 function Mainpage() {
     let navigate = useNavigate();
     const showdata1 =() =>{
-        Axios.post('http://localhost:3301/showdata',{
+        Axios.post('http://cheshire.cse.buffalo.edu:3301/showdata',{
           username : localStorage.getItem("name"),
         }).then((response)=>{
             localStorage.setItem("birthday",response.data[0].birthday)
@@ -20,19 +20,19 @@ function Mainpage() {
             <button class="backbutton"onClick={()=>{
             navigate("/");}}>BACK
             </button>
-            <button class="profilebutton"onClick={showdata1}>Profile
+            <button class="profilebutton"onClick={showdata1}>PROFILE
             </button>
             <button class="searchbutton"onClick={()=>{
-            navigate("/");}}>Search
+            navigate("/");}}>SEARCH
             </button>
             <button class="identifiedbutton"onClick={()=>{
-            navigate("/");}}>Identified
+            navigate("/chati");}}>IDENTIFIED
             </button>
             <button class="anonymousbutton"onClick={()=>{
-            navigate("/");}}>Anonymous
+            navigate("/chata");}}>ANONYMOUS
             </button>
             <button class="designerbutton"onClick={()=>{
-            navigate("/infoPage");}}>Designer
+            navigate("/infoPage");}}>DESIGNER
             </button>
         </div>
     );

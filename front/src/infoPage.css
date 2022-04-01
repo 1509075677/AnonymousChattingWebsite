@@ -1,25 +1,3 @@
-.DeveloperInformationBox{
-    position: absolute;
-    width: 98%;
-    height: 10%;
-    left: 1%;
-    top: 2%;
-    background: #632AAC;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-}
-.DeveloperInformation{
-    position: absolute;
-    width: 98%;
-    height: 10%;
-    top: 13%;
-    left: 2%;
-    font-family: 'Orbitron';
-    font-style: normal;
-    font-size: 3.5vmax;
-    text-align: center;
-    color: #FFFFFF;
-}
 .PicBoxJason{
     position: absolute;
     width: 10%;
@@ -32,6 +10,7 @@
     content: "";
     display: block;
     padding-bottom: 100%;
+    
 }
 .PicBoxZhaowei{
     position: absolute;
@@ -74,7 +53,6 @@
     position: absolute;
     top: 15%;
     left: 20%;
-    font-family: 'Orbitron';
     font-style: normal;
     font-size: 1.3vmax;
     color: #000000;
@@ -83,7 +61,6 @@
     position: absolute;
     top: 42%;
     left: 20%;
-    font-family: 'Orbitron';
     font-style: normal;
     font-size: 1.3vmax;
     color: #000000;
@@ -92,7 +69,6 @@
     position: absolute;
     top: 69%;
     left: 20%;
-    font-family: 'Orbitron';
     font-style: normal;
     font-size: 1.3vmax;
     color: #000000;

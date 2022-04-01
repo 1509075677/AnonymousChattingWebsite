@@ -10,26 +10,6 @@
     top: 53%;
     transform: translate(-117%, 10%);
 }
-input[type=usernametext] {
-    font-size:25px;
-    width: 25%;
-    padding: 23px;
-    display: inline-block;
-    position: absolute;
-    left: 50%;
-    top: 27%;
-    transform: translate(17%, 10%);
-}
-input[type=passwordtext] {
-    font-size:25px;
-    width: 25%;
-    padding: 23px;
-    display: inline-block;
-    position: absolute;
-    left: 50%;
-    top: 41%;
-    transform: translate(17%, 10%);
-}
 .loginborder{
     position: absolute;
     width: 25%;
