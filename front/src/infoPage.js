@@ -38,7 +38,7 @@ function InfoPage() {
                 <b>Develop:</b> Information Page<br></br>
             </p>
             <button class="Back"onClick={()=>{
-            navigate("/mainpage");}}>Back
+            navigate("/main");}}>Back
             </button>
     </div>
     );
