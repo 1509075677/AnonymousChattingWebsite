@@ -9,19 +9,26 @@ function Login() {
   let navigate = useNavigate();
 
   const login =() =>{
-    navigate("/")
-    Axios.post('http://localhost:3302/login',{
-      
+    //http://localhost:3301/login
+    //http://cheshire.cse.buffalo.edu:3301/login
+    Axios.post('http://cheshire.cse.buffalo.edu:3301/login',{ 
       username : usernameR,
       password : passwordR,
-    }).then(()=>{
-      alert('nice')
+    }).then((response)=>{
+      if(response.data.message){
+        alert("WRONG PASSWORD OR USERNAME");
+      }
+      else{
+        localStorage.setItem("name",response.data[0].username)
+        alert("WELCOME "+ response.data[0].username);
+        navigate("/main")
+      }
     });
   };
   return (
     <div class='form'>
       <div class="NOMO" onClick={()=>{
-            navigate("/");}}><img src="images/NOMO.svg"/></div>
+          navigate("/");}}><img src="images/NOMO.svg"/></div>
       <div class ="Quote"><img src="./images/quote.svg"/></div>
       <input type="usernametext" 
         placeholder="USERNAME" 

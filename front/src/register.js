@@ -8,13 +8,26 @@ function Register() {
     let navigate = useNavigate();
     
     const register =() =>{
-        navigate("/")
-        Axios.post('http://localhost:3302/register',{
+        Axios.post('http://cheshire.cse.buffalo.edu:3301/login',{
         username : usernameR,
         password : passwordR,
-        }).then(()=>{
-        alert('nice');
+        }).then((response)=>{
+        if(response.data.message){
+            Axios.post('http://cheshire.cse.buffalo.edu:3301/register',{
+            username : usernameR,
+            password : passwordR,
+            });
+            Axios.post('http://cheshire.cse.buffalo.edu:3301/profile',{
+            username : usernameR,
+            });
+            alert("REGISTRATION SUCCESSFUL");
+            navigate("/login");
+        }
+        else{
+            alert("THE USERNAME: "+response.data[0].username+ " HAS BEEN TAKEN");
+        }
         });
+        
     };
     return (
         <div class='form'>
