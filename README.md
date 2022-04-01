@@ -24,4 +24,3 @@ A website that requires you to log in.Then click a button to blindly find people
 
 **Figma Link:**
 https://www.figma.com/file/kOzRcYqIjCiVAkIFcMreK9/CSE442?node-id=0%3A1
-
