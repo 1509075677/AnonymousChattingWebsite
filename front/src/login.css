@@ -28,3 +28,25 @@
     left: 65.6%;
     top: 61%;
 }
+input[type=username] {
+    font-size:25px;
+    width: 25%;
+    height: 5%;
+    padding: 23px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 27%;
+    transform: translate(17%, 10%);
+  }
+  input[type=password] {
+    font-size:25px;
+    width: 25%;
+    height: 5%;
+    padding: 23px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 41%;
+    transform: translate(17%, 10%);
+  }
