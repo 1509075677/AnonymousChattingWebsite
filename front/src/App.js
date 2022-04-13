@@ -11,11 +11,13 @@ import Mainpage from './mainpage';
 import Profilemodify from './profilemodify';
 import Profile from './profile';
 import InfoPage from './infoPage'
+import SearchPage from './search';
 
 function App() {
   return(
     <Router>
       <Routes>
+        <Route path="/search" element={<SearchPage />}/>
         <Route path="/profile" element={<Profile />}/>
         <Route path="/infoPage" element={<InfoPage />}/>
         <Route path="/profilemodify" element={<Profilemodify />}/>

@@ -23,7 +23,7 @@ function Mainpage() {
             <button class="profilebutton"onClick={showdata1}>PROFILE
             </button>
             <button class="searchbutton"onClick={()=>{
-            navigate("/");}}>SEARCH
+            navigate("/search");}}>SEARCH
             </button>
             <button class="identifiedbutton"onClick={()=>{
             navigate("/chati");}}>IDENTIFIED
