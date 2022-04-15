@@ -78,8 +78,10 @@ app.post('/pfmodify',(req,res)=>{
 
 app.post('/search',(req,res)=>{
     const username = req.body.username;
-    const sql ="SELECT * FROM profile WHERE username = ?"
-    db.query(sql, [username],(err,result)=>{
+    const birthday = req.body.birthday;
+    const email = req.body.email;
+    const sql ="INSERT INTO profile (username, birthday, email) VALUES (?,?,?)"
+    db.query(sql, [username,birthday,email],(err,result)=>{
         if (err) {
             res.send({err:err});
         }

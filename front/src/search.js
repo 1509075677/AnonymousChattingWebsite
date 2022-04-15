@@ -5,28 +5,30 @@ import Axios from 'axios'
 
 function SearchPage(){
     let navigate = useNavigate();
-    let showname = ""
+    let UserName = ""
+    let Birthday = ""
+    let Email = ""
     const [data,setData] = useState(null);
-    //http://localhost:3302/login
-    //http://cheshire.cse.buffalo.edu:3301/login
+    //http://localhost:3302/search
+    //http://cheshire.cse.buffalo.edu:3302/search
     function searchUser(){
-        Axios.post('http://localhost:3302/login/search',{ 
+        Axios.post('http://cheshire.cse.buffalo.edu:3302/search',{ 
             username : data,
         }).then((response)=>{
             if(response.data.message){
-              alert("WRONG PASSWORD OR USERNAME");
+              alert("Username Doesn't exsit");
             }
             else{
-              localStorage.setItem("name",response.data[0].username)
-              alert("WELCOME "+ response.data[0].username);
-              navigate("/main")
+                UserName = response.data[0].username;
+                Birthday = response.data[0].Birthday;
+                Email = response.data[0].Email;
             }
         });
     }
     function TalkToUser(){
         alert("Up Coming");
     }
-    function AddUser(){
+    function UserProfile(){
         alert("Up Coming");
     }
     return(
@@ -44,9 +46,9 @@ function SearchPage(){
                 </form>
                 <div class="UserSearchResult">
                     <p class="Username"><b>User Name:</b></p>
-                    <div class="showUsername">{showname}</div>
+                    <div class="showUsername">{UserName}</div>
                     <button class="TalkButton" onClick={TalkToUser}>Talk</button>
-                    <button class="AddButton" onClick={AddUser}>Add</button>
+                    <button class="ProfileButton" onClick={UserProfile}>Profile</button>
                 </div>
             </div>
             <button class="Back" onClick={()=>{navigate("/main");}}>
