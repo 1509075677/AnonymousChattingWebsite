@@ -8,7 +8,7 @@ function Mainpage() {
     //http://localhost:3301/showdata
     //http://cheshire.cse.buffalo.edu:3301/showdata
     const showdata1 =() =>{
-        Axios.post('http://localhost:3301/showdata',{
+        Axios.post('http://cheshire.cse.buffalo.edu:3301/showdata',{
           username : localStorage.getItem("name"),
         }).then((response)=>{
             localStorage.setItem("birthday",response.data[0].birthday)

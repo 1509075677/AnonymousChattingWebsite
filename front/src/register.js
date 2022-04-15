@@ -9,16 +9,16 @@ function Register() {
     //http://localhost:3301/login
     //http://cheshire.cse.buffalo.edu:3301/login
     const register =() =>{
-        Axios.post('http://localhost:3301/login',{
+        Axios.post('http://cheshire.cse.buffalo.edu:3301/login',{
         username : usernameR,
         password : passwordR,
         }).then((response)=>{
         if(response.data.message){
-            Axios.post('http://localhost:3301/register',{
+            Axios.post('http://cheshire.cse.buffalo.edu:3301/register',{
             username : usernameR,
             password : passwordR,
             });
-            Axios.post('http://localhost:3301/profile',{
+            Axios.post('http://cheshire.cse.buffalo.edu:3301/profile',{
             username : usernameR,
             });
             alert("REGISTRATION SUCCESSFUL");
@@ -46,10 +46,6 @@ function Register() {
             .catch(function (error) {
                 console.log(error);
             });
-
-
-
-
 
 
 

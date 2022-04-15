@@ -10,7 +10,7 @@ function Profilemodify() {
     //http://localhost:3301/pfmodify
     //http://cheshire.cse.buffalo.edu:3301/pfmodify
     const pmodify =() =>{
-        Axios.post('http://localhost:3301/pfmodify',{
+        Axios.post('http://cheshire.cse.buffalo.edu:3301/pfmodify',{
           username : localStorage.getItem("name"),
           birthday : birthdayR,
           email : emailR,
