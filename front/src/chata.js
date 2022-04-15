@@ -12,5 +12,4 @@ function Chata() {
     />
   );
 }
-
 export default Chata;

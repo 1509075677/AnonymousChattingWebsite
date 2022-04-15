@@ -8,6 +8,8 @@ function Register() {
     const [passwordR,setPassword] = useState('');
     let navigate = useNavigate();
     const myrandom='Anonymous'+Math.floor(Math.random() * 10000).toString();
+    //http://localhost:3301/login
+    //http://cheshire.cse.buffalo.edu:3301/login
     const register =() =>{
         Axios.post('http://cheshire.cse.buffalo.edu:3301/login',{
         username : usernameR,
@@ -72,11 +74,6 @@ function Register() {
             .catch(function (error) {
                 console.log(error);
             });
-
-
-
-
-
 
             navigate("/login");
         }
