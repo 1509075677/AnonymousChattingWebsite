@@ -6,21 +6,53 @@ function Register() {
     const [usernameR,setUsername] = useState('');
     const [passwordR,setPassword] = useState('');
     let navigate = useNavigate();
-    
+    //http://localhost:3301/login
+    //http://cheshire.cse.buffalo.edu:3301/login
     const register =() =>{
-        Axios.post('http://cheshire.cse.buffalo.edu:3301/login',{
+        Axios.post('http://localhost:3301/login',{
         username : usernameR,
         password : passwordR,
         }).then((response)=>{
         if(response.data.message){
-            Axios.post('http://cheshire.cse.buffalo.edu:3301/register',{
+            Axios.post('http://localhost:3301/register',{
             username : usernameR,
             password : passwordR,
             });
-            Axios.post('http://cheshire.cse.buffalo.edu:3301/profile',{
+            Axios.post('http://localhost:3301/profile',{
             username : usernameR,
             });
             alert("REGISTRATION SUCCESSFUL");
+
+            
+            var axios = require('axios');
+            var data = ({
+                "username": usernameR,
+                "secret": passwordR
+            });
+
+            var config = {
+                method: 'post',
+                url: 'https://api.chatengine.io/users/',
+                headers: {
+                    'PRIVATE-KEY': '{{968b73fb-dce2-45fc-af0a-f5e831618689}}'
+                },
+                data : data
+            };
+
+            axios(config)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+
+
+
+
+
+
             navigate("/login");
         }
         else{

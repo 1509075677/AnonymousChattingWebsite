@@ -11,7 +11,7 @@ function Login() {
   const login =() =>{
     //http://localhost:3301/login
     //http://cheshire.cse.buffalo.edu:3301/login
-    Axios.post('http://cheshire.cse.buffalo.edu:3301/login',{ 
+    Axios.post('http://localhost:3301/login',{ 
       username : usernameR,
       password : passwordR,
     }).then((response)=>{
@@ -19,11 +19,14 @@ function Login() {
         alert("WRONG PASSWORD OR USERNAME");
       }
       else{
-        localStorage.setItem("name",response.data[0].username)
+        localStorage.setItem("name",response.data[0].username);
         alert("WELCOME "+ response.data[0].username);
-        navigate("/main")
+        navigate("/main");
+        localStorage.setItem('username',response.data[0].username);
+        localStorage.setItem('password',response.data[0].password);
       }
     });
+
   };
   return (
     <div class='form'>

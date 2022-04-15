@@ -7,9 +7,10 @@ function Profilemodify() {
     const [birthdayR,setbirthday] = useState('');
     const [emailR,setemail] = useState('');
     let navigate = useNavigate();
-
+    //http://localhost:3301/pfmodify
+    //http://cheshire.cse.buffalo.edu:3301/pfmodify
     const pmodify =() =>{
-        Axios.post('http://cheshire.cse.buffalo.edu:3301/pfmodify',{
+        Axios.post('http://localhost:3301/pfmodify',{
           username : localStorage.getItem("name"),
           birthday : birthdayR,
           email : emailR,

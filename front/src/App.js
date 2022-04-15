@@ -12,6 +12,7 @@ import Profilemodify from './profilemodify';
 import Profile from './profile';
 import InfoPage from './infoPage'
 
+
 function App() {
   return(
     <Router>
