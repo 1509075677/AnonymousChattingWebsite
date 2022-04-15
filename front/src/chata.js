@@ -6,8 +6,8 @@ function Chata() {
   return(
     <ChatEngine
       height="100vh"
-      projectID="72d976b0-eb76-475a-94d1-1f3dc8085a5b"
-      userName={localStorage.getItem('username')}
+      projectID="cf4092c8-f436-4018-94c9-70a69852188f"
+      userName={localStorage.getItem('random')}
       userSecret={localStorage.getItem('password')}
     />
   );
