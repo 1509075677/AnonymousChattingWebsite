@@ -76,6 +76,21 @@ app.post('/pfmodify',(req,res)=>{
     });
 });
 
+app.post('/search',(req,res)=>{
+    const username = req.body.username;
+    const sql ="SELECT * FROM profile WHERE username = ?"
+    db.query(sql, [username],(err,result)=>{
+        if (err) {
+            res.send({err:err});
+        }
+        else if(result.length > 0){
+            res.send(result);
+        }
+        else{
+            res.send({message:"NO SUCH USER"});
+        }
+    });
+});
 
 app.listen(PORT, ()=>{
     console.log("runnning on port 3301");

@@ -1,13 +1,27 @@
 import React, {useState} from 'react';
 import './search.css'
 import {useNavigate} from "react-router-dom"
+import Axios from 'axios'
 
 function SearchPage(){
     let navigate = useNavigate();
     let showname = ""
     const [data,setData] = useState(null);
+    //http://localhost:3302/login
+    //http://cheshire.cse.buffalo.edu:3301/login
     function searchUser(){
-        alert("Up Coming");
+        Axios.post('http://localhost:3302/login/search',{ 
+            username : data,
+        }).then((response)=>{
+            if(response.data.message){
+              alert("WRONG PASSWORD OR USERNAME");
+            }
+            else{
+              localStorage.setItem("name",response.data[0].username)
+              alert("WELCOME "+ response.data[0].username);
+              navigate("/main")
+            }
+        });
     }
     function TalkToUser(){
         alert("Up Coming");
