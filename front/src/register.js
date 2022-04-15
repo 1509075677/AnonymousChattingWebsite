@@ -59,7 +59,7 @@ function Register() {
 
             axios(config2)
             .then(function (response) {
-                console.log(JSON.stringify(response.data));
+                console.log(JSON.stringify(response.data2));
             })
             .catch(function (error) {
                 console.log(error);
