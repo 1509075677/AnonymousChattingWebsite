@@ -2,11 +2,12 @@ import React,{useState} from 'react';
 import './reg.css';
 import Axios from 'axios'
 import {useNavigate} from "react-router-dom";
+
 function Register() {
     const [usernameR,setUsername] = useState('');
     const [passwordR,setPassword] = useState('');
     let navigate = useNavigate();
-    
+    const myrandom='Anonymous'+Math.floor(Math.random() * 10000).toString();
     const register =() =>{
         Axios.post('http://cheshire.cse.buffalo.edu:3301/login',{
         username : usernameR,
@@ -18,9 +19,65 @@ function Register() {
             password : passwordR,
             });
             Axios.post('http://cheshire.cse.buffalo.edu:3301/profile',{
-            username : usernameR,
+            username : usernameR
             });
+            Axios.post('http://cheshire.cse.buffalo.edu:3301/anonchat',{
+            username : usernameR,
+            random : myrandom,
+            });
+
             alert("REGISTRATION SUCCESSFUL");
+
+            var axios = require('axios');
+            var data = ({
+                "username": usernameR,
+                "secret": passwordR
+            }); 
+     
+            var data2 = ({
+                "username": myrandom,
+                "secret": passwordR
+            });
+
+            var config = {
+                method: 'post',
+                url: 'https://api.chatengine.io/users/',
+                headers: {
+                    'PRIVATE-KEY': '{{968b73fb-dce2-45fc-af0a-f5e831618689}}'
+                },
+                data : data
+            };
+
+            var config2 = {
+                method: 'post',
+                url: 'https://api.chatengine.io/users/',
+                headers: {
+                    'PRIVATE-KEY': '{{ca4be9eb-e4b6-4ef8-9da5-c13b1717c048}}'
+                },
+                data : data2
+            };
+
+            axios(config2)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+            axios(config)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+
+
+
+
+
             navigate("/login");
         }
         else{
