@@ -13,6 +13,7 @@ import Profile from './profile';
 import InfoPage from './infoPage'
 import SearchPage from './search';
 
+
 function App() {
   return(
     <Router>

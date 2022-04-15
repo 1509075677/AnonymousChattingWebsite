@@ -19,24 +19,27 @@ function Login() {
         alert("WRONG PASSWORD OR USERNAME");
       }
       else{
-        localStorage.setItem("name",response.data[0].username)
+        localStorage.setItem("name",response.data[0].username);
         alert("WELCOME "+ response.data[0].username);
-        navigate("/main")
+        navigate("/main");
+        localStorage.setItem('username',response.data[0].username);
+        localStorage.setItem('password',response.data[0].password);
       }
     });
+
   };
   return (
     <div class='form'>
       <div class="NOMO" onClick={()=>{
           navigate("/");}}><img src="images/NOMO.svg"/></div>
       <div class ="Quote"><img src="./images/quote.svg"/></div>
-      <input type="usernametext" 
+      <input type="username" 
         placeholder="USERNAME" 
         onChange={(e)=>{
           setUsername(e.target.value)
         }}
       />
-      <input type="passwordtext" 
+      <input type="password" 
         placeholder="PASSWORD" 
         onChange={(e)=>{
           setPassword(e.target.value)

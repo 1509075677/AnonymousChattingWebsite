@@ -1,18 +1,15 @@
 import React from 'react';
 import './chat.css';
+import { ChatEngine } from 'react-chat-engine';
 
 function Chata() {
   return(
-    <div>
-        <div class="home"><img src="./images/chat/home.svg"/></div>
-        <div class="out"><img src="./images/chat/out.svg"/></div>
-        <div class="in"><img src="./images/chat/in.svg"/></div>
-        <div class="chatbox"><img src="./images/chat/chatbox.svg"/></div>
-        <div class="sendbox"><img src="./images/chat/sendbox.svg"/></div>
-        <div class="send"><img src="./images/chat/send.svg"/></div>
-        <div class="ano"><img src="./images/chat/ano.svg"/></div>
-    </div>
+    <ChatEngine
+      height="100vh"
+      projectID="72d976b0-eb76-475a-94d1-1f3dc8085a5b"
+      userName={localStorage.getItem('username')}
+      userSecret={localStorage.getItem('password')}
+    />
   );
 }
-
 export default Chata;
