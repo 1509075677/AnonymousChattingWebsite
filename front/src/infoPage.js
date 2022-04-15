@@ -1,6 +1,5 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './infoPage.css';
-import Axios from 'axios'
 import {useNavigate} from "react-router-dom";
 
 function InfoPage() {
@@ -35,7 +34,7 @@ function InfoPage() {
                 <b>Developed:</b> Designer Page<br></br>
             </p>
             <button class="Back"onClick={()=>{
-            navigate("/main");}}>Back
+            navigate("/main");}}><b>Back</b>
             </button>
     </div>
     );

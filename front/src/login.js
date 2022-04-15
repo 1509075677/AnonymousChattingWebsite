@@ -30,24 +30,24 @@ function Login() {
           localStorage.setItem("random",response.data[0].random);
           alert(localStorage.getItem("random"));
         });
-
         alert("WELCOME "+ response.data[0].username);
-        navigate("/main")
+        navigate("/main");
       }
     });
+
   };
   return (
     <div class='form'>
       <div class="NOMO" onClick={()=>{
           navigate("/");}}><img src="images/NOMO.svg"/></div>
       <div class ="Quote"><img src="./images/quote.svg"/></div>
-      <input type="usernametext" 
+      <input type="username" 
         placeholder="USERNAME" 
         onChange={(e)=>{
           setUsername(e.target.value)
         }}
       />
-      <input type="passwordtext" 
+      <input type="password" 
         placeholder="PASSWORD" 
         onChange={(e)=>{
           setPassword(e.target.value)
