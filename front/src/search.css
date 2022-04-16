@@ -1,6 +1,6 @@
 .SearchTitle{
     position: absolute;
-    left: 45%;
+    left: 48%;
     top: 8%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 300%;
@@ -35,7 +35,7 @@
 .InputSearchUser{
     position: absolute;
     top: 20%;
-    left: 43%;
+    left: 46%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 150%;
     text-align: center;
@@ -48,32 +48,70 @@
     width: 20%;
     border: 10px solid skyblue;
     border-radius: 25px;
-    padding: 2%;
+    padding: 4%;
 }
 .Username{
     position: absolute;
-    top: 18%;
+    top: 10%;
     left: 6%;
 }
 .showUsername{
     position: absolute;
-    top: 39%;
+    top: 10%;
     left: 28%;
+}
+.Birthday{
+    position: absolute;
+    top: 35%;
+    left: 6%;
+}
+.showBirthday{
+    position: absolute;
+    top: 35%;
+    left: 28%;
+}
+.Email{
+    position: absolute;
+    top: 60%;
+    left: 6%;
+}
+.showEmail{
+    position: absolute;
+    top: 60%;
+    left: 28%;
+}
+.SearchButton{
+    background: #5243dd;
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 25px;
+    color: #FFFFFF;
+}
+.SearchButton:hover{
+    background: #3726cf;
 }
 .TalkButton{
     position: absolute;
-    top: 36%;
+    width: 15%;
+    height: 45%;
+    top: 28%;
     right: 5%;
+    background: #5A4B6D;
+    border: 1px solid #FFFFFF;
+    border-radius: 100%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 150%;
+    color: #FFFFFF;
 }
-.ProfileButton{
-    position: absolute;
-    top: 36%;
-    right: 15%;
+.TalkButton:hover{
+    background: #4c336d;
 }
 .Back{
     position: absolute;
-    width: 200px;
-    height: 60px;
+    width: 10%;
+    height: 8%;
     left: 85%;
     top: 88%;
     background: #5A4B6D;
@@ -85,4 +123,7 @@
     font-weight: 400;
     font-size: 30px;
     color: #FFFFFF;
+}
+.Back:hover{
+    background: #4c336d;
 }
