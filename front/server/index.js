@@ -48,6 +48,26 @@ app.post('/profile',(req,res)=>{
     db.query(sql, [username,birthday,email]);
 });
 
+app.post('/anonchat',(req,res)=>{    //register
+    const username = req.body.username;
+    const random = req.body.random;
+    const sql ="INSERT INTO anonchat (username, random) VALUES (?,?)"
+    db.query(sql, [username,random]);
+});
+
+app.post('/anonchat2',(req,res)=>{   //login
+    const username = req.body.username;
+    const sql ="SELECT * FROM anonchat WHERE username = ?"
+    db.query(sql, [username],(err,result)=>{
+        if (err) {
+            res.send({err:err});
+        }
+        else{
+            res.send(result);
+        }
+    });
+});
+
 app.post('/showdata',(req,res)=>{
     const username = req.body.username;
     const sql ="SELECT * FROM profile WHERE username = ?"
@@ -75,7 +95,6 @@ app.post('/pfmodify',(req,res)=>{
         }
     });
 });
-
 
 app.listen(PORT, ()=>{
     console.log("runnning on port 3301");
