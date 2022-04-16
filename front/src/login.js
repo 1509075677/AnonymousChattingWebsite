@@ -19,11 +19,22 @@ function Login() {
         alert("WRONG PASSWORD OR USERNAME");
       }
       else{
-        localStorage.setItem("name",response.data[0].username)
+        localStorage.setItem("name",response.data[0].username);
+        localStorage.setItem("username",response.data[0].username);
+        localStorage.setItem("password",response.data[0].password);
+
+        Axios.post('http://cheshire.cse.buffalo.edu:3301/anonchat2',{ 
+          username : usernameR,
+          password : passwordR
+        }).then((response)=>{
+          localStorage.setItem("random",response.data[0].random);
+          alert(localStorage.getItem("random"));
+        });
         alert("WELCOME "+ response.data[0].username);
-        navigate("/main")
+        navigate("/main");
       }
     });
+
   };
   return (
     <div class='form'>
@@ -36,7 +47,7 @@ function Login() {
           setUsername(e.target.value)
         }}
       />
-      <input type="passwordtext" 
+      <input type="password" 
         placeholder="PASSWORD" 
         onChange={(e)=>{
           setPassword(e.target.value)
