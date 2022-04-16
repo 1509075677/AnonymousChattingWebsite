@@ -90,24 +90,6 @@
 .SearchButton:hover{
     background: #3726cf;
 }
-.TalkButton{
-    position: absolute;
-    width: 15%;
-    height: 45%;
-    top: 28%;
-    right: 5%;
-    background: #5A4B6D;
-    border: 1px solid #FFFFFF;
-    border-radius: 100%;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-size: 150%;
-    color: #FFFFFF;
-}
-.TalkButton:hover{
-    background: #4c336d;
-}
 .Back{
     position: absolute;
     width: 10%;

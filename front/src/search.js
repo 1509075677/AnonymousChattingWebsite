@@ -6,12 +6,12 @@ import Axios from 'axios'
 function SearchPage(){
     let navigate = useNavigate();
     let username = localStorage.getItem("SearchUser");
-    let birthday = localStorage.getItem("SearthBirth");
+    let Birth = localStorage.getItem("SearchBirth");
     let email = localStorage.getItem("SearchEmail");
     const [input,setInput] = useState('')
     const searchUser =() =>{
         // http://localhost:3301/search
-        // http://cheshire.cse.buffalo.edu:3301/login
+        // http://cheshire.cse.buffalo.edu:3301/search
         Axios.post('http://cheshire.cse.buffalo.edu:3301/search',{ 
             username : input,
         }).then((res)=>{
@@ -24,21 +24,13 @@ function SearchPage(){
             }
             else{
                 localStorage.setItem("SearchUser",res.data[0].username);
-                localStorage.setItem("SearchBirth",res.data[0].birthday)
-                localStorage.setItem("SearchEmail",res.data[0].email)
+                localStorage.setItem("SearchBirth",res.data[0].birthday);
+                localStorage.setItem("SearchEmail",res.data[0].email);
                 localStorage.setItem("UserExist",'true');
                 alert("Show User Profile");
             }
         });
     };
-    function TalkToUser(){
-        if(localStorage.getItem("UserExist") === 'true'){
-            alert("Feature Will Be Coming");
-        }
-        else{
-            alert("No User Be Found");
-        }
-    }
     return(
         <div>
             <div class="SearchTitleBox">
@@ -56,10 +48,9 @@ function SearchPage(){
                     <p class="Username"><b>User Name:</b></p>
                     <div class="showUsername">{<p>{username}</p>}</div>
                     <p class="Birthday"><b>Birthday:</b></p>
-                    <div class="showBirthday">{<p>{birthday}</p>}</div>
+                    <div class="showBirthday">{<p>{Birth}</p>}</div>
                     <p class="Email"><b>Email:</b></p>
                     <div class="showEmail">{<p>{email}</p>}</div>
-                    <button class="TalkButton" onClick={TalkToUser}><b>Talk</b></button>
                 </div>
             </div>
             <button class="Back" onClick={()=>{navigate("/main");}}>
