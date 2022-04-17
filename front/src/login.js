@@ -39,9 +39,9 @@ function Login() {
   return (
     <div class='form'>
       <div class="NOMO" onClick={()=>{
-          navigate("/");}}><img src="images/NOMO.svg"/></div>
-      <div class ="Quote"><img src="./images/quote.svg"/></div>
-      <input type="username" 
+          navigate("/");}}><img src="images/NOMO.svg" alt='NOMO'/></div>
+      <div class ="Quote"><img src="./images/quote.svg" alt='quote'/></div>
+      <input type="usernametext" 
         placeholder="USERNAME" 
         onChange={(e)=>{
           setUsername(e.target.value)
@@ -55,7 +55,7 @@ function Login() {
       />
       <div class="loginborder" onClick={login}>
       </div>
-      <div class="loginclass"><img src="./images/login/loginimage.svg"/></div>
+      <div class="loginclass"><img src="./images/login/loginimage.svg" alt='loginimage'/></div>
     </div>
 
   );

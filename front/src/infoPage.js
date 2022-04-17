@@ -21,17 +21,17 @@ function InfoPage() {
             <p class="JasonInfo">
                 <b>Name:</b> Jason Chen<br></br>
                 <b>Education:</b> University at Buffalo, Computer Science BS, Junior<br></br>
-                <b>Developed:</b> Login,Register<br></br>
+                <b>Developed:</b> Login,Register,Chat,Anonymous<br></br>
             </p>
             <p class="ZhaoweiInfo">
                 <b>Name:</b> Zhaowei Zhao<br></br>
                 <b>Education: University</b> at Buffalo, Computer Science BS, Junior<br></br>
-                <b>Developed:</b> Profile <br></br>
+                <b>Developed:</b> Profile,Chat,Identified<br></br>
             </p>
             <p class="WeichengInfo">
                 <b>Name:</b> Weicheng Zhou<br></br>
                 <b>Education:</b> University at Buffalo, Computer Science BS, Junior<br></br>
-                <b>Developed:</b> Designer Page<br></br>
+                <b>Developed:</b> Designer Page,Search,Optimize Website<br></br>
             </p>
             <button class="Back"onClick={()=>{
             navigate("/main");}}><b>Back</b>

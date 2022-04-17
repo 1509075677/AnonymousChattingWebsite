@@ -1,34 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './search.css'
 import {useNavigate} from "react-router-dom"
+import Axios from 'axios'
+
 
 function SearchPage(){
     let navigate = useNavigate();
-    let showname = ""
+    const [input,setInput] = useState('');
+    const search =() =>{
+        // http://localhost:3301/search
+        // http://cheshire.cse.buffalo.edu:3301/search
+        Axios.post('http://cheshire.cse.buffalo.edu:3301/search',{
+            username : input,
+        }).then((response)=>{
+            if(response.data.message){
+                alert("Username Doesn't Exist");
+            }
+            else{
+                localStorage.setItem("susername",response.data[0].username);
+                localStorage.setItem("sbirthday",response.data[0].birthday);
+                localStorage.setItem("semail",response.data[0].email);
+                alert("Show User Profile");
+                navigate("/sprofile");
+            }
+        });
+    };
     return(
         <div>
-            <div class="SearchTitleBox">
-                <h class="SearchTitle"><b>Search</b></h>
-            </div>
-            <div>
-                <img class="searchImage" src="./images/searchPage/search.jpg" alt="searchImage"/>
-                <img class="searchImage1" src="./images/searchPage/search1.jpg" alt="searchImage1"/>
-                <form class="InputSearchUser" >
-                    <label for="username">Search For Username: <br></br></label>
-                    <input type="text" placeholder="Enter Username"/>
-                    <button class="SearchButton">Search</button>
-                </form>
-                <div class="UserSearchResult">
-                    <p class="Username"><b>User Name:</b></p>
-                    <div class="showUsername">{showname}</div>
-                    <button class="TalkButton">Talk</button>
-                    <button class="AddButton">Add</button>
-                </div>
-            </div>
-            <button class="Back" onClick={()=>{navigate("/main");}}>
-                <b>Back</b>
-            </button>
+            <input type="searchbox" placeholder="Search Username" onChange={(e)=>{setInput(e.target.value)}}/>
+            <button class="bsearch" onClick={search}>SEARCH</button>
+            <button class="Back" onClick={()=>{navigate("/main");}}>BACK</button>
         </div>
     );
 }
+
 export default SearchPage;

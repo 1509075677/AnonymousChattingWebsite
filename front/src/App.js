@@ -13,6 +13,7 @@ import Profile from './profile';
 import InfoPage from './infoPage'
 import SearchPage from './search';
 
+import Sprofile from './sprofile';
 
 function App() {
   return(
@@ -29,6 +30,9 @@ function App() {
         <Route path="/chati" element={<Chati />}/>
         <Route path="/chata" element={<Chata />}/>
         <Route path="*" element={<Error />}/>
+          
+        <Route path="/sprofile" element={<Sprofile />}/>
+          
       </Routes>
     </Router>
   );
