@@ -10,7 +10,7 @@ function SearchPage(){
     const search =() =>{
         // http://localhost:3301/search
         // http://cheshire.cse.buffalo.edu:3301/search
-        Axios.post('http://localhost:3301/search',{
+        Axios.post('http://cheshire.cse.buffalo.edu:3301/search',{
             username : input,
         }).then((response)=>{
             if(response.data.message){
