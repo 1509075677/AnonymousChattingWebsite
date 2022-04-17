@@ -5,9 +5,6 @@ import Axios from 'axios'
 
 function SearchPage(){
     let navigate = useNavigate();
-    let username = ""
-    let birth = ""
-    let email = ""
     const [input,setInput] = useState('')
     const searchUser =() =>{
         // http://localhost:3301/search
@@ -16,16 +13,23 @@ function SearchPage(){
             username : input,
         }).then((res)=>{
             if(res.data.message){
-              alert("Username Doesn't Exsit");
+              localStorage.setItem("SearchUser",'');
+              localStorage.setItem("SearchBirth",'');
+              localStorage.setItem("SearchEmail",'');
+              alert("Username Doesn't Exist");
             }
             else{
-                username=res.data[0].username;
-                birth=res.data[0].birthday;
-                email=res.data[0].email;
+                localStorage.setItem("SearchUser",res.data[0].username);
+                localStorage.setItem("SearchBirth",res.data[0].birthday);
+                localStorage.setItem("SearchEmail",res.data[0].email);
                 alert("Show User Profile");
             }
         });
     };
+    let username = localStorage.getItem("SearchUser");
+    let birth = localStorage.getItem("SearthBirth");
+    let email = localStorage.getItem("SearchEmail");
+    
     return(
         <div>
             <div class="SearchTitleBox">
