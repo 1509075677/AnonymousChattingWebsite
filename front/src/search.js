@@ -5,9 +5,10 @@ import Axios from 'axios'
 
 function SearchPage(){
     let navigate = useNavigate();
-    let username = localStorage.getItem("SearchUser");
-    let birth = localStorage.getItem("SearchBirth");
-    let email = localStorage.getItem("SearchEmail");
+    let username=localStorage.setItem("SearchUser",'');
+    let birth=localStorage.setItem("SearchBirth",'');
+    let email=localStorage.setItem("SearchEmail",'');
+    
     const [input,setInput] = useState('')
     const searchUser =() =>{
         // http://localhost:3301/search
@@ -16,9 +17,6 @@ function SearchPage(){
             username : input,
         }).then((res)=>{
             if(res.data.message){
-              localStorage.setItem("SearchUser",'');
-              localStorage.setItem("SearchBirth",'');
-              localStorage.setItem("SearchEmail",'');
               alert("Username Doesn't Exist");
             }
             else{
@@ -29,6 +27,10 @@ function SearchPage(){
             }
         });
     };
+    username = localStorage.getItem("SearchUser");
+    birth = localStorage.getItem("SearchBirth");
+    email = localStorage.getItem("SearchEmail");
+    
     return(
         <div>
             <div class="SearchTitleBox">
