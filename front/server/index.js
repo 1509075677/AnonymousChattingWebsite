@@ -100,7 +100,10 @@ app.post('/search',(req,res)=>{
     const username = req.body.username;
     const sql ="SELECT * FROM profile WHERE username = ?"
     db.query(sql, [username],(err,result)=>{
-        if(result.length > 0){
+        if (err) {
+            res.send({err:err});
+        }
+        else if(result.length > 0){
             res.send(result);
         }
         else{

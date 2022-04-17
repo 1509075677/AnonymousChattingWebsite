@@ -10,17 +10,18 @@ function SearchPage(){
     let email = localStorage.getItem("SearchEmail");
     const [input,setInput] = useState('')
     const searchUser =() =>{
+        alert("Warming: Everytime Click On Search Button Have 1 Minute Cooldown");
         // http://localhost:3301/search
         // http://cheshire.cse.buffalo.edu:3301/search
-        Axios.post('http://cheshire.cse.buffalo.edu:3301/search',{ 
+        Axios.post('http://localhost:3301/search',{
             username : input,
         }).then((res)=>{
             if(res.data.message){
-              alert("Username Doesn't Exsit");
-              localStorage.setItem("SearchUser",'');
-              localStorage.setItem("SearchBirth",'');
-              localStorage.setItem("SearchEmail",'');
-              localStorage.setItem("UserExist",'false');
+                localStorage.setItem("SearchUser",'');
+                localStorage.setItem("SearchBirth",'');
+                localStorage.setItem("SearchEmail",'');
+                localStorage.setItem("UserExist",'false');
+                alert("Username Doesn't Exsit");
             }
             else{
                 localStorage.setItem("SearchUser",res.data[0].username);
