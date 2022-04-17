@@ -5,6 +5,9 @@ import Axios from 'axios'
 
 function SearchPage(){
     let navigate = useNavigate();
+    let username = localStorage.getItem("SearchUser");
+    let birth = localStorage.getItem("SearchBirth");
+    let email = localStorage.getItem("SearchEmail");
     const [input,setInput] = useState('')
     const searchUser =() =>{
         // http://localhost:3301/search
@@ -26,10 +29,6 @@ function SearchPage(){
             }
         });
     };
-    let username = localStorage.getItem("SearchUser");
-    let birth = localStorage.getItem("SearthBirth");
-    let email = localStorage.getItem("SearchEmail");
-    
     return(
         <div>
             <div class="SearchTitleBox">
