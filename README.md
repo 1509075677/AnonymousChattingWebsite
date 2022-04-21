@@ -14,13 +14,13 @@ A website that requires you to log in.Then click a button to blindly find people
 
 **Four major milestones to reach the end goals (in line with the Sprint cycles)**
 
-**Sprint 1:** Getting familiar with PHP and all the front end/back end designs codes.
+**Sprint 1:** Create Front-End for Landing Page, Login Page, and Register Page
 
-**Sprint 2:** Starting to code the front end design.
+**Sprint 2:** Create Back-End for Login Feature, Profile Feature. Create Front-End for the Designer Page and Profile Page
 
-**Sprint 3:** Mostly finished with the code of the front end, starting code with the back end.
+**Sprint 3:** Adding Anonymous Talk Feature, Identified Talk Feature, and Search Username Search Feature
 
-**Sprint 4:** Checking everything works and concluding both front end and back end.
+**Sprint 4:** Fixing Bug and Optimize the Code
 
 **Figma Link:**
 https://www.figma.com/file/kOzRcYqIjCiVAkIFcMreK9/CSE442?node-id=0%3A1
