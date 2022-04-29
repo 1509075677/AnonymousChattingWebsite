@@ -18,23 +18,23 @@ function Mainpage() {
       };
     return (
         <div class='form'>
-            <p class="NOMOtitle">NOMO</p>
+            <img class='NOMOtitle' src="./images/landing/landingnomo.svg"/>
             <button class="backbutton"onClick={()=>{
-            navigate("/");}}>BACK
+            navigate("/");}}><b>BACK</b>
             </button>
-            <button class="profilebutton"onClick={showdata1}>PROFILE
+            <button class="profilebutton"onClick={showdata1}><b>PROFILE</b>
             </button>
             <button class="searchbutton"onClick={()=>{
-            navigate("/search");}}>SEARCH
+            navigate("/search");}}><b>SEARCH</b>
             </button>
             <button class="identifiedbutton"onClick={()=>{
-            navigate("/chati");}}>IDENTIFIED
+            navigate("/chati");}}><b>IDENTIFIED</b>
             </button>
             <button class="anonymousbutton"onClick={()=>{
-            navigate("/chata");}}>ANONYMOUS
+            navigate("/chata");}}><b>ANONYMOUS</b>
             </button>
             <button class="designerbutton"onClick={()=>{
-            navigate("/infoPage");}}>DESIGNER
+            navigate("/infoPage");}}><b>DESIGNER</b>
             </button>
         </div>
     );
