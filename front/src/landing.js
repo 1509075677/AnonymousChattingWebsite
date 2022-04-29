@@ -19,13 +19,13 @@ function Landing() {
           </div>
 
           <div class="landingquote">
-            <img src="./images/landing/landingquote.svg"/>
+            <img src="./images/landing/landingquote.svg" alt='landingquote'/>
           </div>
           <div class="landinglogin">
-            <img src="./images/landing/landinglogin.svg"/>
+            <img src="./images/landing/landinglogin.svg" alt='landinglogin'/>
           </div>
           <div class="landingsignup">
-            <img src="./images/landing/landingreg.svg"/>
+            <img src="./images/landing/landingreg.svg" alt='landingreg'/>
           </div>
   
         </div>
