@@ -86,8 +86,8 @@ function Register() {
     return (
         <div class='form'>
         <div class="NOMO" onClick={()=>{
-            navigate("/");}}><img src="images/NOMO.svg"/></div>
-        <div class ="Quote"><img src="./images/quote.svg"/></div>
+            navigate("/");}}><img src="images/NOMO.svg" alt='NOMO'/></div>
+        <div class ="Quote"><img src="./images/quote.svg" alt='quote'/></div>
         <input type="usernametext" 
             placeholder="USERNAME" 
             onChange={(e)=>{
@@ -102,7 +102,7 @@ function Register() {
         />
         <input type="retypepasswordtext" placeholder="RETYPE PASSWORD"/>
         <button class="regborder" onClick={register}></button>
-        <div class="reg"><img src="./images/register.svg"/></div>
+        <div class="reg"><img src="./images/register.svg" alt='register'/></div>
         </div>
     );
 }
