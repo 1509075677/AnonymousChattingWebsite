@@ -20,7 +20,7 @@ function Mainpage() {
         <div class='form'>
             <img class='NOMOtitle' src="./images/landing/landingnomo.svg"/>
             <button class="backbutton"onClick={()=>{
-            navigate("/");}}><b>BACK</b>
+            navigate("/");}}><b>LOGOUT</b>
             </button>
             <button class="profilebutton"onClick={showdata1}><b>PROFILE</b>
             </button>
