@@ -1,10 +1,11 @@
 .PicBoxJason{
     position: absolute;
     width: 10%;
-    left: 2%;
+    left: 25%;
     top: 17%;
     background: #ffffff;
     border: 3px solid #000000;
+    border-radius: 100px;
 }
 .PicBoxJason::after{
     content: "";
@@ -15,10 +16,11 @@
 .PicBoxZhaowei{
     position: absolute;
     width: 10%;
-    left: 2%;
+    left: 25%;
     top: 44%;
     background: #ffffff;
     border: 3px solid #000000;
+    border-radius: 100px;
 }
 .PicBoxZhaowei::after{
     content: "";
@@ -28,10 +30,11 @@
 .PicBoxWeicheng{
     position: absolute;
     width: 10%;
-    left: 2%;
+    left: 25%;
     top: 71%;
     background: #ffffff;
     border: 3px solid #000000;
+    border-radius: 100px;
 }
 .PicBoxWeicheng::after{
     content: "";
@@ -42,7 +45,7 @@
     position: absolute;
     width: 98%;
     left: 1%;
-    top: 7.5%;
+    top: 4%;
 }
 .Pic::after{
     content: "";
@@ -51,46 +54,30 @@
 }
 .JasonInfo{
     position: absolute;
-    top: 15%;
-    left: 20%;
+    top: 19%;
+    left: 40%;
     font-style: normal;
     font-size: 1.3vmax;
     color: #000000;
 }
 .ZhaoweiInfo{
     position: absolute;
-    top: 42%;
-    left: 20%;
+    top: 46%;
+    left: 40%;
     font-style: normal;
     font-size: 1.3vmax;
     color: #000000;
 }
 .WeichengInfo{
     position: absolute;
-    top: 69%;
-    left: 20%;
+    top: 73%;
+    left: 40%;
     font-style: normal;
     font-size: 1.3vmax;
     color: #000000;
 }
-.BackBox{
-    position: absolute;
-    width: 8%;
-    height: 6%;
-    left: 91%;
-    top: 90%;
-    background: #632AAC;
-    border: 1px solid #000000;
-}
-.BackBox::after{
-    content: "";
-    display: block;
-    padding-bottom: 25%;
-}
 .Back{
     position: absolute;
-    width: 200px;
-    height: 60px;
     left: 85%;
     top: 88%;
     background: #5A4B6D;
@@ -103,16 +90,19 @@
     font-size: 30px;
     color: #FFFFFF;
 }
+.Back:hover{
+    background: #320e63;
+    cursor: pointer;
+}
+.DesignerBox{
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: #632AAC;
+    border: 1px solid #000000;
+}
 .designertitle{
-    position: absolute;
-    width: 350px;
-    height: 50px;
-    left: 38%;
-    top: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 45px;
+    font-size: 250%;
     text-align: center;
-    color: #5A4B6D;
+    color: #ffffff;
 }
