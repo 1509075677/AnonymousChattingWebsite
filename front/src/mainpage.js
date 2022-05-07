@@ -20,7 +20,7 @@ function Mainpage() {
         <div class='form'>
             <p class="NOMOtitle">NOMO</p>
             <button class="backbutton"onClick={()=>{
-            navigate("/");}}>BACK
+            navigate("/");}}>LOGOUT
             </button>
             <button class="profilebutton"onClick={showdata1}>PROFILE
             </button>
