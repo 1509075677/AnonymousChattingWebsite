@@ -32,6 +32,9 @@ function Profilemodify() {
             <p class="myemail">MY EMAIL:</p>
             <button class="savebutton"onClick={pmodify}>Save
             </button> 
+            <button class="modifybutton"onClick={()=>{
+             navigate("/profile");}}>Not Save
+            </button>
             <input type="emailtext" placeholder="My email"
             onChange={(e)=>{setemail(e.target.value)}}/>
             <input type="birthdaytext" placeholder="My birthday"
