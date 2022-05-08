@@ -4,7 +4,7 @@ import Chat from "./Chat";
 
 const socket = io.connect("http://localhost:3303");
 
-function Chati() {
+function Chata() {
   const username = localStorage.getItem("random");
   socket.emit("join_room", "Anonymous");
   return (
@@ -13,4 +13,4 @@ function Chati() {
     </div>
   );
 }
-export default Chati;
+export default Chata;
