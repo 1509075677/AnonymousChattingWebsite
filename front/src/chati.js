@@ -1,16 +1,19 @@
-import React from 'react';
-import './chat.css';
-import { ChatEngine } from 'react-chat-engine';
+import "./chat.css";
+import io from "socket.io-client";
+import Chat from "./Chat";
+import { useNavigate } from "react-router-dom";
+
+const socket = io.connect("http://cheshire.cse.buffalo.edu:3303");
 
 function Chati() {
-  return(
-    <ChatEngine
-      height="100vh"
-      projectID="72d976b0-eb76-475a-94d1-1f3dc8085a5b"
-      userName={localStorage.getItem('username')}
-      userSecret={localStorage.getItem('password')}
-    />
+  const username = localStorage.getItem("username");
+  socket.emit("join_room", "Identified");
+  let navigate = useNavigate();
+  return (
+    <div>
+      <Chat socket={socket} username={username} room={"Identified"} />
+      <button class="Back" onClick={()=>{navigate("/main")}}>BACK</button>
+    </div>
   );
 }
-
 export default Chati;
