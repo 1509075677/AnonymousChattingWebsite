@@ -1,15 +1,16 @@
-import React from 'react';
-import './chat.css';
-import { ChatEngine } from 'react-chat-engine';
+import "./chat.css";
+import io from "socket.io-client";
+import Chat from "./Chat";
 
-function Chata() {
-  return(
-    <ChatEngine
-      height="100vh"
-      projectID="cf4092c8-f436-4018-94c9-70a69852188f"
-      userName={localStorage.getItem('random')}
-      userSecret={localStorage.getItem('password')}
-    />
+const socket = io.connect("http://localhost:3303");
+
+function Chati() {
+  const username = localStorage.getItem("random");
+  socket.emit("join_room", "Anonymous");
+  return (
+    <div>
+      <Chat socket={socket} username={username} room={"Anonymous"} />
+    </div>
   );
 }
-export default Chata;
+export default Chati;
