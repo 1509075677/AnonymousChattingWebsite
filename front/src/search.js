@@ -27,10 +27,9 @@ function SearchPage(){
     };
     return(
         <div>
-            <img class='sNOMOtitle' src="./images/landing/landingnomo.svg"/>
-            <input type="searchbox" placeholder="Username ..." onChange={(e)=>{setInput(e.target.value)}}/>
-            <button class="bsearch" onClick={search}><b>SEARCH</b></button>
-            <button class="Back" onClick={()=>{navigate("/main");}}><b>BACK</b></button>
+            <input type="searchbox" placeholder="Search Username" onChange={(e)=>{setInput(e.target.value)}}/>
+            <button class="bsearch" onClick={search}>SEARCH</button>
+            <button class="Back" onClick={()=>{navigate("/main");}}>BACK</button>
         </div>
     );
 }
