@@ -2,17 +2,17 @@
     position: absolute;
     height: 10%;
     width: 20%;
-    left: 39%;
-    top: 48%;
+    left: 43%;
+    top: 37%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 450%;
     color: #5A4B6D;
 }
 .backbutton{
     position: absolute;
-    width: 12%;
-    height: 6.5%;
-    right: 30%;
+    width: 15%;
+    height: 10%;
+    right: 27%;
     top: 75%;
     background: #5A4B6D;
     border: 1px solid #FFFFFF;
@@ -29,10 +29,10 @@
 }
 .profilebutton{
     position: absolute;
-    width: 12%;
-    height: 6.5%;
-    right: 75%;
-    top: 50%;
+    width: 15%;
+    height: 10%;
+    left: 15%;
+    top: 47%;
     background: #5A4B6D;
     border: 1px solid #FFFFFF;
     border-radius: 25px;
@@ -48,10 +48,10 @@
 }
 .searchbutton{
     position: absolute;
-    width: 12%;
-    height: 6.5%;
+    width: 15%;
+    height: 10%;
     right: 15%;
-    top: 50%;
+    top: 47%;
     background: #5A4B6D;
     border: 1px solid #FFFFFF;
     border-radius: 25px;
@@ -67,10 +67,10 @@
 }
 .identifiedbutton{
     position: absolute;
-    width: 12%;
-    height: 6.5%;
-    right: 60%;
-    top: 25%;
+    width: 15%;
+    height: 10%;
+    left: 27%;
+    top: 20%;
     background: #5A4B6D;
     border: 1px solid #FFFFFF;
     border-radius: 25px;
@@ -86,10 +86,10 @@
 }
 .anonymousbutton{
     position: absolute;
-    width: 12%;
-    height: 6.5%;
-    right: 30%;
-    top: 25%;
+    width: 15%;
+    height: 10%;
+    right: 27%;
+    top: 20%;
     background: #5A4B6D;
     border: 1px solid #FFFFFF;
     border-radius: 25px;
@@ -105,9 +105,9 @@
 }
 .designerbutton{
     position: absolute;
-    width: 12%;
-    height: 6.5%;
-    right: 60%;
+    width: 15%;
+    height: 10%;
+    left: 27%;
     top: 75%;
     background: #5A4B6D;
     border: 1px solid #FFFFFF;
