@@ -24,3 +24,30 @@ A website that requires you to log in.Then click a button to blindly find people
 
 **Figma Link:**
 https://www.figma.com/file/kOzRcYqIjCiVAkIFcMreK9/CSE442?node-id=0%3A1
+
+**How to Run Our Code in Server**
+  Prequest: install Cisco Annyconnect Secure Mobility Client and connect to SUNY buffalo's vpn
+  1. First we need to open a terminal
+  2. Then, type to following code(<ubit> mean enter your own ubit): ssh <ubit>@cheshire.cse.buffalo.edu
+  3. Type the password of your ub account
+  4. Type: cd /web/CSE442-542/2022-Spring/cse-442t/cse442-spring2022-team-12pm/front
+  5. Then run the server using: npm run dev
+  Now you can access website using the following link:
+    http://cheshire.cse.buffalo.edu:3302/
+  Done running the website type: pkill -f node
+  This avoide crash from next time running it
+  
+**How to Run Our Code in Local**
+  Prequest:
+    Node.js (https://nodejs.org/en/)
+    Node Package Manager (Terminal command: npm install)
+    Our Code (Terminal command: git clone git@github.com:xlab-classes/cse442-spring2022-team-12pm.git)
+  1. Go to the folder of the code: cd /......./cse442-spring2022-team-12pm/
+  2. Install npm in cse442-spring2022-team-12pm folder using ternimal
+  3. Run the code using: npm run dev
+  4. Then it will pop out the http://localhost:3302/ 
+  5. Now you can access the website
+  Warming: in order to go to another page, you need to change all the code's website link from 
+              http://cheshire.cse.buffalo.edu:3302/ to http://localhost:3301/  
+                                                    or
+          http://cheshire.cse.buffalo.edu:3302/main to http://localhost:3301/main
